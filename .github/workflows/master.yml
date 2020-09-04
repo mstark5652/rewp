@@ -9,18 +9,18 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - name: Install dependencies
-      run: npm ci
-    - name: Unit Test
-      run: npm run lint && npm test
-    - name: Tag repo
-      run: npm i @actions/github@4.0.0 && node ./scripts/tagRepo.js
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      env:
-        CI: true
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install dependencies
+        run: npm ci
+      - name: Unit Test
+        run: npm run lint && npm test
+        env:
+          CI: true
+      - name: Tag repo
+        run: npm i @actions/github@4.0.0 && node ./scripts/tagRepo.js
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
