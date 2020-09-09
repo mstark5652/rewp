@@ -19,6 +19,11 @@
   "author": "mstark5652",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
+    "mocha": "^8.1.3",
+    "nyc": "^15.1.0",
+    "standard": "^14.1.0"
+  },
+  "dependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
@@ -32,17 +37,13 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^4.2.0",
     "image-webpack-loader": "^6.0.0",
-    "mocha": "^8.1.3",
-    "nyc": "^15.1.0",
     "sass-loader": "^10.0.2",
     "source-map-loader": "^0.2.4",
     "st-cl-parser": "^0.5.0",
-    "standard": "^14.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-plugin-serve": "^1.0.1"
   },
-  "dependencies": {},
   "nyc": {
     "check-coverage": true,
     "branches": 100,
