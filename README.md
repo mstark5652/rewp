@@ -17,6 +17,8 @@ Each mode has flags you can pass down with it.
 #### `build`
 - `--watch` (boolean)
     - defaults to false
+- `--serve` (boolean)
+    - defaults to false
 - `--config`
 - `--overrideConfig` (boolean)
     - defaults to false
