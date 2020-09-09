@@ -9,7 +9,7 @@ Using npm you can simply run `npx rewp build` in your project's root directory.
 ## Arguments
 ### Modes
 - `build` Starts a build with webpack.
-- `test` Starts running tests with jest.
+- `test` Starts running tests with jest. (not implemented yet)
 - `version` Gets the current rewp version.
 
 ### Flags
