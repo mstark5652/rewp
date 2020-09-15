@@ -3,6 +3,9 @@
 ## Purpose
 A builder for react and webpack applications. Like react-scripts but simpler (doesn't do as much).
 
+## Install
+You can install this via npm `npm install --save-dev rewp`
+
 ## Usage
 Using npm you can simply run `npx rewp build` in your project's root directory.
 
@@ -26,5 +29,6 @@ Each mode has flags you can pass down with it.
 
 #### `test` 
 
-#### `version`
 
+#### `version`
+No flags
