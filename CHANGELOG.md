@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1] - 2020-09-24
+### Fixed
+- env var to set resolveLoader when linking
+
 ## [0.3.0] - 2020-09-24
 ### Changed
 - Upgraded all dependencies
