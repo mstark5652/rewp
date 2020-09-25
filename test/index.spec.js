@@ -3,6 +3,6 @@ const assert = require('assert')
 
 describe('rewp', function () {
   it('has a test', function () {
-    assert.strict.equal(1, 1)
+    assert.strictEqual(1, 1)
   })
 })
