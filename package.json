@@ -41,6 +41,7 @@
     "sass-loader": "^10.0.2",
     "source-map-loader": "^1.1.0",
     "st-cl-parser": "^0.5.1",
+    "terser-webpack-plugin": "^4.2.3",
     "webpack": "^4.44.2",
     "webpack-plugin-serve": "^1.0.1"
   },
