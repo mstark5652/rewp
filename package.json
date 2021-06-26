@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "export NODE_ENV=test && nyc mocha --recursive --exit",
-    "lint": "standard *.js",
-    "lint:fix": "standard ./src/**/*.js --fix"
+    "lint": "standard",
+    "lint:fix": "standard --fix"
   },
   "repository": {
     "type": "git",
