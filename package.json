@@ -1,7 +1,7 @@
 {
   "name": "rewp",
   "productName": "rewp",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "React-webpack builder.",
   "main": "lib/run.js",
   "bin": {
