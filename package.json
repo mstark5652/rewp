@@ -21,7 +21,7 @@
   "devDependencies": {
     "mocha": "^9.2.2",
     "nyc": "^15.1.0",
-    "standard": "^16.0.4"
+    "standard": "^17.0.0"
   },
   "dependencies": {
     "@babel/cli": "^7.17.6",
