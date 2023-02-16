@@ -1,20 +1,20 @@
 name: Node CI
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types:
+      - created
+
 jobs:
   build:
     runs-on: ubuntu-18.04
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "18.x"
       - name: Install dependencies
         run: npm ci
       - name: Lint
@@ -23,16 +23,11 @@ jobs:
         run: npm test
         env:
           CI: true
-      - name: Get build version
-        id: get-build-version
-        run: echo "::set-output name=build-version::$(node -p "require('./package.json').version")"
-        shell: bash
-      - name: Tag repo
-        uses: mstark5652/tag-repo@v0.2.0
-        with:
-          gh-token: ${{ secrets.GITHUB_TOKEN }}
-          build-version: ${{ steps.get-build-version.outputs.build-version }}
-          build-message: 'New release'
+      - name: Read GitHub Ref
+        id: vars
+        run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Set Package Version
+        run: npm version ${{ env.tag }} --no-git-tag-version
       - name: Publish to npm
         run: npm publish
         env:
